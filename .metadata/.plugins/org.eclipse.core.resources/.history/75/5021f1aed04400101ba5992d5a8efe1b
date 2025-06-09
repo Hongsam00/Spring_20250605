@@ -1,0 +1,8 @@
+package com.pcwk.ehr.user.di.field;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class Engine {
+
+}

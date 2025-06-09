@@ -1,0 +1,27 @@
+package com.pcwk.ehr.user.dao;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration //애플리케이션 컨텍스트 또는 빈 팩토리가 사용할 설정 정보
+public class DaoFactory {
+	
+	/**
+	 * UserDao 생성
+	 * @return UserDao
+	 */
+	
+	@Bean
+	public UserDao userDao() {
+		connectionMaker();
+		
+		UserDao dao = new UserDao(connectionMaker());
+		
+		return dao;
+	}
+	
+	@Bean
+	public ConnectionMaker connectionMaker() {
+		return new NConnectionMaker();
+	}
+}

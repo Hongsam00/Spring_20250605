@@ -1,0 +1,21 @@
+/**
+ * Package Name : com.pcwk.ehr.user.di.field <br/>
+ * 파일명: Main.java <br/>
+ */
+package com.pcwk.ehr.user.di.field;
+
+/**
+ * @author user
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

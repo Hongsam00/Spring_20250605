@@ -1,0 +1,12 @@
+package com.pcwk.ehr.user.di.field;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Car {
+
+	@Bean
+	private Engine engine;
+	
+}

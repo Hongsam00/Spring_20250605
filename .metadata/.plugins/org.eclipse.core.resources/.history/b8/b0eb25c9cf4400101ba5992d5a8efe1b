@@ -1,0 +1,15 @@
+package com.pcwk.ehr.user.di.setter;
+
+import com.pcwk.ehr.user.di.Car;
+import com.pcwk.ehr.user.di.Engine;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Engine engine = new Engine();
+		
+		Car car = new Car(engine);
+		car.drive();
+	}
+
+}

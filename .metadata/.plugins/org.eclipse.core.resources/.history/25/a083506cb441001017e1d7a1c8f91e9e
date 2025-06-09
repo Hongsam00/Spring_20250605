@@ -1,0 +1,9 @@
+package com.pcwk.ehr.user.dao;
+
+public class SimpleConnectionMaker {
+//- makeNewConnection(param:UserDTO): Connection
+	
+	public Conncetion makeNewConnection() {
+		
+	}
+}

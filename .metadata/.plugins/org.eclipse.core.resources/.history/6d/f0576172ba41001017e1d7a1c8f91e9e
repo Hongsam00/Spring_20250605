@@ -1,0 +1,17 @@
+package com.pcwk.ehr.user.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public interface ConnectionMaker {
+
+	/**
+	 * DB 연결
+	 * 
+	 * @return
+	 * @throws ClassNotFoundException 
+	 * @throws SQLException 
+	 */
+	Connection makeNewConnection() throws ClassNotFoundException, SQLException;
+
+}

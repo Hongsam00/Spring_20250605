@@ -1,0 +1,21 @@
+/**
+ * Package Name : com.pcwk.ehr <br/>
+ * Class Name: Hello.java <br/> 
+ */
+package com.pcwk.ehr;
+
+/**
+ * @author user
+ *
+ */
+public class Hello {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+
+	}
+
+}

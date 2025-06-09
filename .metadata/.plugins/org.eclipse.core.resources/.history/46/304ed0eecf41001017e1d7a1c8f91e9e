@@ -1,0 +1,23 @@
+package com.pcwk.ehr.user.dao;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class DaoFactory {
+	
+	/**
+	 * UserDao 생성
+	 * @return UserDao
+	 */
+	public UserDao userDao() {
+		connectionMaker();
+		
+		UserDao dao = new UserDao(connectionMaker());
+		
+		return dao;
+	}
+	
+	public ConnectionMaker connectionMaker() {
+		return new NConnectionMaker();
+	}
+}

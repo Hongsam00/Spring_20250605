@@ -1,0 +1,20 @@
+package com.pcwk.ehr.user.dao;
+
+public class DaoFactory {
+	
+	/**
+	 * UserDao 생성
+	 * @return UserDao
+	 */
+	public UserDao userDao() {
+		connectionMaker();
+		
+		UserDao dao = new UserDao(connectionMaker);
+		
+		return dao;
+	}
+	
+	public ConnectionMaker connectionMaker() {
+		return new NConnectionMaker();
+	}
+}
