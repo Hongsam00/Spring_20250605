@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Package Name : com.pcwk.ehr.user <br/>
  * 파일명: UserMain.java <br/>
@@ -75,3 +76,82 @@ public class UserMain {
 	}
 
 }
+=======
+/**
+ * Package Name : com.pcwk.ehr.user <br/>
+ * 파일명: UserMain.java <br/>
+ */
+package com.pcwk.ehr.user;
+
+import java.sql.SQLException;
+
+import com.pcwk.ehr.user.dao.UserDao;
+import com.pcwk.ehr.user.domain.UserDTO;
+
+public class UserMain {
+
+	UserDTO dto01;
+	UserDao dao;
+	
+	public UserMain() {
+		dto01 = new UserDTO("pcwk01", "이상무01", "4321a", "사용안함");
+		dao = new UserDao();
+	}
+	
+	public void getConnection() {
+		try {
+			dao.doSave(dto01);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void doSave() {
+		try {
+			int flag = dao.doSave(dto01);
+			if(1==flag) {
+				System.out.println("-----------------");
+				System.out.println("----doSave성공----");
+				System.out.println("-----------------");
+			} else {
+				System.out.println("----doSave실패----");
+			}
+		}  catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void doSelectOne() {
+		UserDTO outDTO;
+		try {
+			outDTO = dao.doSelectOne(dto01);
+			
+			if(null !=outDTO) {
+				System.out.println("----------------------");
+				System.out.println("----doSelectOne성공----");
+				System.out.println("----------------------");
+			}else {
+				System.out.println("-------doSave실패------");
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		UserMain main = new UserMain();
+		main.doSave();
+		main.doSelectOne();
+
+
+	}
+
+}
+>>>>>>> 646959ed7a43ecc48dacf66ac75af191cb9c615f
